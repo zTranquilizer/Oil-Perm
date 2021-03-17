@@ -12,9 +12,11 @@
 
 @import "_nullstyle.scss";
 @import "fonts";
+
 $fontFamily: "Manrope";
+
 $minwidth: 320px;
-$mw: 1170;
+$mw: 1110;
 $md1: $mw + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -24,6 +26,7 @@ body {
 	color: #000;
 	font-size: 14px;
 	font-family: $fontFamily;
+	font-weight: 400;
 	&.lock {
 		overflow: hidden;
 	}
@@ -57,3 +60,283 @@ body {
 @import "footer.scss";
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+.hero-screen {
+	padding: 80px 0px 80px 0px;
+	position: relative;
+	@media (max-width: $md3+px) {
+		padding: 40px 0px 30px 0px;
+		background: #ffbf33;
+	}
+	&__body {
+		position: relative;
+		display: flex;
+		@media (max-width: $md3+px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__content {
+		flex: 0 0 55%;
+		position: relative;
+		z-index: 2;
+		@media (max-width: $md3+px) {
+			flex: 0 0 100%;
+			margin: 0px 0px 30px 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		font-size: calc(25px + (65 - 25) * ((100vw - 320px) / (1440 - 320)));
+		line-height: calc(25px + (90 - 25) * ((100vw - 320px) / (1440 - 320)));
+		@media (min-width: $mw+px) {
+			font-size: 65px;
+			line-height: 90px;
+		}
+		color: #111111;
+		margin: 36px 0px 50px 0px;
+		max-width: 572px;
+		@media (max-width: $md3+px) {
+			text-align: center;
+			margin: 15px 0px 30px 0px;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 30px;
+		color: #111111;
+		max-width: 545px;
+		font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1440 - 320)));
+		line-height: calc(20px + (30 - 23) * ((100vw - 320px) / (1440 - 320)));
+		@media (min-width: $mw+px) {
+			font-size: 18px;
+			line-height: 20px;
+		}
+		@media (max-width: $md3+px) {
+			text-align: center;
+		}
+	}
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		height: 62px;
+		padding: 0px 49px;
+		margin: 50px 0px 0px 0px;
+		font-weight: 700;
+		font-size: 20px;
+		text-align: center;
+		color: #111111;
+		background-color: #ffbf33;
+		border-radius: 8px;
+		text-align: center;
+		@media (max-width: $md3+px) {
+			background-color: #111111;
+			color: #ffbf33;
+		}
+	}
+
+	&__bg-circle {
+		position: absolute;
+		width: 745px;
+		height: 745px;
+		top: -64%;
+		right: -23%;
+		border-radius: 50%;
+		background: #ffbf33;
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+	}
+	&__image {
+		position: relative;
+		z-index: 2;
+		img {
+			max-width: 100%;
+		}
+
+		@media (max-width: $md3+px) {
+			flex: 0 0 100%;
+		}
+	}
+}
+.partners {
+	padding: 80px 0px 80px 0px;
+	@media (max-width: $md3+px) {
+		padding: 40px 0px 40px 0px;
+	}
+	&__body {
+	}
+
+	&__list {
+		padding: 44px 0px 20px 0px;
+		display: flex;
+		justify-content: center;
+		border: 1px solid rgba(17, 17, 17, 0.2);
+		border-right: none;
+		border-left: none;
+		flex-wrap: wrap;
+		@media (max-width: $md4+px) {
+			padding: 20px 0px 20px 0px;
+		}
+	}
+	&__list-item {
+		margin: 0px 32px 24px 32px;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.advantages {
+	padding: 80px 0px 80px 0px;
+	@media (max-width: $md3+px) {
+		padding: 40px 0px 40px 0px;
+	}
+	&__body {
+	}
+
+	&__title {
+		margin: 0px 0px 50px 0px;
+		@media (max-width: $md3+px) {
+			text-align: center;
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		margin: 0px -15px;
+		justify-content: space-between;
+		@media (max-width: $md2+px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		padding: 0px 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__item-img {
+		img {
+			max-width: 100%;
+		}
+		margin: 0px 0px 5px 0px;
+	}
+
+	&__item-title {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		text-align: center;
+		color: #111111;
+		margin: 0px 0px 8px 0px;
+	}
+
+	&__item-text {
+		font-size: 16px;
+		line-height: 26px;
+		text-align: center;
+		color: #111111;
+		max-width: 350px;
+	}
+}
+
+.title {
+	font-weight: 800;
+	color: #111111;
+	font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (1440 - 320)));
+	line-height: calc(21px + (64 - 21) * ((100vw - 320px) / (1440 - 320)));
+	@media (min-width: $mw+px) {
+		font-size: 48px;
+		line-height: 64px;
+	}
+
+	&_b {
+	}
+	span {
+		color: #ffbf33;
+	}
+}
+
+.work-process {
+	padding: 80px 0px 80px 0px;
+	@media (max-width: $md3+px) {
+		padding: 40px 0px 40px 0px;
+	}
+	&__body {
+	}
+
+	&__title {
+		margin: 0px 0px 50px 0px;
+		@media (max-width: $md3+px) {
+			text-align: center;
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		margin: 0px -15px;
+		justify-content: space-between;
+		@media (max-width: $md2+px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		padding: 0px 15px;
+		flex: 0 0 25%;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 15px 0px;
+			flex: 0 0 50%;
+		}
+		@media (max-width: 530px) {
+			flex: 0 0 100%;
+		}
+	}
+
+	&__item-point {
+		display: flex;
+		align-items: center;
+		margin: 0px 0px 16px 0px;
+	}
+
+	&__point-circle {
+		flex: 0 0 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: #ffbf33;
+	}
+
+	&__point-line {
+		flex: 1 1 auto;
+		margin: 0px 24px;
+		height: 1px;
+		border-top: 2px dashed #111111;
+	}
+
+	&__item-name {
+		margin: 0px 0px 4px 0px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: #111111;
+	}
+
+	&__item-text {
+		font-size: 16px;
+		line-height: 26px;
+		color: #111111;
+	}
+}
