@@ -12,6 +12,7 @@
 
 @import "_nullstyle.scss";
 @import "fonts";
+@import "swiper.scss";
 
 $fontFamily: "Manrope";
 
@@ -253,7 +254,7 @@ body {
 
 .title {
 	font-weight: 800;
-	color: #111111;
+
 	font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (1440 - 320)));
 	line-height: calc(21px + (64 - 21) * ((100vw - 320px) / (1440 - 320)));
 	@media (min-width: $mw+px) {
@@ -262,9 +263,24 @@ body {
 	}
 
 	&_b {
+		color: #111111;
+	}
+	&_w {
+		color: #fff;
 	}
 	span {
 		color: #ffbf33;
+	}
+}
+.text {
+	font-size: 18px;
+	line-height: 32px;
+	color: #111111;
+	font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1440 - 320)));
+	line-height: calc(21px + (32 - 21) * ((100vw - 320px) / (1440 - 320)));
+	@media (min-width: $mw+px) {
+		font-size: 18px;
+		line-height: 32px;
 	}
 }
 
@@ -338,5 +354,254 @@ body {
 		font-size: 16px;
 		line-height: 26px;
 		color: #111111;
+	}
+}
+
+.our-work {
+	position: relative;
+	padding: 380px 0px 126px 0px;
+	@media (max-width: $md2+px) {
+		padding: 180px 0px 80px 0px;
+	}
+	@media (max-width: $md3+px) {
+		padding: 40px 0px 40px 0px;
+	}
+	&__bg-img {
+		position: absolute;
+		top: 80px;
+		width: 100%;
+		left: 0;
+		height: 57%;
+		background: url("../img/our-work-bg.png") center/cover no-repeat;
+		@media (max-width: $md2+px) {
+			height: 70%;
+		}
+		@media (max-width: $md3+px) {
+			top: 0;
+		}
+	}
+
+	&__bg-color {
+		height: 290px;
+		background-color: #111111;
+		position: absolute;
+		bottom: 0;
+		height: 43%;
+		left: 0;
+		width: 100%;
+		@media (max-width: $md2+px) {
+			height: 30%;
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 2;
+		padding: 64px;
+		background-color: #fff;
+		max-width: 540px;
+		border-radius: 8px;
+
+		@media (max-width: $md3+px) {
+			padding: 34px 32px;
+		}
+	}
+
+	&__title {
+		margin: 0px 0px 10px 0px;
+		@media (max-width: $md3+px) {
+			text-align: center;
+		}
+	}
+
+	&__text {
+		margin: 0px 0px 50px 0px;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+			text-align: center;
+		}
+	}
+
+	&__links {
+		display: flex;
+		@media (max-width: $md2+px) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: $md3+px) {
+			justify-content: center;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 20px;
+		color: #ffbf33;
+		position: relative;
+		margin: 0px 40px 0px 0px;
+		@media (max-width: $md2+px) {
+			margin: 0px 20px 20px 0px;
+		}
+
+		&_video {
+			padding: 0px 0px 0px 20px;
+			margin: 0px 0px 0px 0px;
+			&:before {
+				content: "";
+				position: absolute;
+				width: 11px;
+				height: 16px;
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+				background: url("../img/video-arrow.svg") center/contain no-repeat;
+			}
+		}
+		@media (min-width: $md2+px) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.reviews {
+	background-color: #111111;
+	padding: 80px 0px 0px 0px;
+	@media (max-width: $md3+px) {
+		padding: 40px 0px 0px 0px;
+	}
+
+	&__body {
+		max-width: 1195px;
+		margin: 0px auto;
+		border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+		padding: 0px 10px;
+	}
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+		@media (max-width: $md3+px) {
+			text-align: center;
+		}
+	}
+
+	&__slider {
+	}
+
+	&__slides {
+	}
+
+	&__slide {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0px 10px 0px 0px;
+		@media (max-width: $md3+px) {
+			flex-wrap: wrap;
+			padding: 0px 20px;
+		}
+	}
+
+	&__slide-content {
+		flex: 0 0 60%;
+		@media (max-width: $md3+px) {
+			flex: 0 0 100%;
+			order: 2;
+		}
+	}
+
+	&__slide-text {
+		color: #ffffff;
+		margin: 0px 0px 50px 0px;
+		position: relative;
+		z-index: 3;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+			text-align: center;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			width: 71px;
+			height: 60px;
+			top: 0;
+			left: 0;
+			// background: url("../img/brecets.svg") center/contain no-repeat;
+			z-index: 1;
+		}
+	}
+
+	&__slide-person {
+		color: #ffbf33;
+		font-weight: 700;
+		font-size: 18px;
+		margin: 0px 0px 10px 0px;
+		@media (max-width: $md3+px) {
+			text-align: center;
+		}
+	}
+
+	&__slide-job {
+		color: #ffbf33;
+		font-size: 16px;
+		margin: 0px 0px 50px 0px;
+		@media (max-width: $md3+px) {
+			text-align: center;
+		}
+	}
+
+	&__slide-img {
+		flex: 0 0 40%;
+		display: flex;
+		align-self: flex-start;
+		@media (max-width: $md3+px) {
+			flex: 0 0 100%;
+			order: 1;
+			margin: 0px 0px 10px 0px;
+			justify-content: center;
+		}
+		img {
+			max-width: 100%;
+			@media (max-width: $md3+px) {
+				max-width: 70%;
+			}
+		}
+	}
+}
+
+.swiper-pagination {
+	position: absolute;
+	transition: 300ms opacity;
+	transform: translate3d(0, 0, 0);
+	z-index: 10;
+	left: 0;
+	bottom: 30px;
+	padding: 0px 0px 0px 0px;
+	@media (max-width: $md2+px) {
+		bottom: 20px;
+	}
+	@media (max-width: $md3+px) {
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	&-clickable {
+		cursor: pointer;
+	}
+}
+.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 50%;
+	background: #fff;
+	margin: 0px 12px 0px 0px;
+	&-active {
+		background: #ffbf33;
 	}
 }
