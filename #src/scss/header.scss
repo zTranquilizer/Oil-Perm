@@ -1,9 +1,24 @@
 .header {
 	position: relative;
-	// width: 100%;
-	// top: 0;
-	// left: 0;
+	transition: all 0.4s ease 0s;
 	z-index: 50;
+	&.fixed {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transition: all 0.4s ease 0s;
+		background-color: #ffbf33;
+		border-bottom: 1px solid #000;
+		opacity: 1;
+		visibility: visible;
+	}
+	&.translate {
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.1s ease 0s;
+	}
+
 	@media (max-width: $md3+px) {
 		&:before {
 			content: "";
