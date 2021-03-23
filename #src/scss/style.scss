@@ -246,6 +246,12 @@ body {
 		text-align: center;
 		color: #111111;
 		margin: 0px 0px 8px 0px;
+		font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1440 - 320)));
+		line-height: calc(21px + (32 - 21) * ((100vw - 320px) / (1440 - 320)));
+		@media (min-width: $mw+px) {
+			font-size: 24px;
+			line-height: 32px;
+		}
 	}
 
 	&__item-text {
